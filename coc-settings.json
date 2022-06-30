@@ -1,0 +1,6 @@
+{
+  "suggest.noselect": false,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "js", "javascript", "markdown", "html"],
+  "emmet.includeLanguages": { "jsx": "javascript-react", "javascript":"javascriptreact", "njk": "html"},
+  "prettier.singleQuote": true
+}
