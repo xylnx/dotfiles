@@ -1,4 +1,4 @@
-let plugins_config = '${HOME}/REPOS/dotfiles/vim/config/plugins.vimrc'
+let plugins_config = 'plugins.vimrc'
 let mappings_work = '${HOME}/REPOS/configs/vim/work.vim'
 let markdown_color_mods = '${HOME}/REPOS/dotfiles/vim/config/MarkdownMods.vim'
 let vimrc_colors = '${HOME}/.vim/vimrc.colors'
