@@ -1,0 +1,64 @@
+" VIM-PLUG USAGE:
+" Install plugins => add plugin below, source .vimrc and call :PlugInstall
+" Uninstall plugs => remove plugin, source .vimrc, call :PlugClean
+" Upadte plugins  => :PlugUpdate, press D to review changes
+" review updates  => :PlugDiff, roll back to previous state pressing x
+
+
+" SETUP => comes in handy on a fresh install
+" Install vim-plug if you cannot find it
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+" Run PlugInstall if plugins are missing
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+
+" Specify a directory for plugins
+" -> avoid using standard Vim directory names like 'plugin'
+call plug#begin('$HOME/.vim/plugged')
+
+  " Color schemes
+  Plug 'dracula/vim', { 'as': 'dracula' }
+  Plug 'https://github.com/joshdick/onedark.vim'
+  Plug 'sonph/onehalf', { 'rtp': 'vim' }
+
+  " Status line
+  Plug 'https://github.com/itchyny/lightline.vim'
+
+  " Syntax highlight (almost) everything
+  Plug 'sheerun/vim-polyglot'
+  " Syntax highlight JSX
+  Plug 'https://github.com/MaxMEllon/vim-jsx-pretty'
+  " Show colors from hex codes
+  Plug 'https://github.com/ap/vim-css-color'
+
+  " Emmet
+  Plug 'https://github.com/mattn/emmet-vim'
+
+  " Finding stuff
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+
+  "Linting
+  Plug 'dense-analysis/ale'
+
+  " Completion
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+  " Git gutter
+  Plug 'https://github.com/airblade/vim-gitgutter'
+  " Git fugitive
+  Plug 'https://github.com/tpope/vim-fugitive'
+
+  " Insert or delete brackets, parens, quotes in pairs
+  Plug 'https://github.com/jiangmiao/auto-pairs'
+
+  " Insert indentation guides
+  Plug 'https://github.com/Yggdroot/indentLine'
+
+call plug#end()
+
