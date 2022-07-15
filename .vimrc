@@ -476,3 +476,7 @@ noremap <silent><leader>l :IndentLinesToggle<CR>
 
 " set shiftwidth to two spaces
 noremap <leader>2 :set shiftwidth=2<cr>
+
+" Persist folds
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent! loadview "silent! surpresses errors (if there is no save file)
