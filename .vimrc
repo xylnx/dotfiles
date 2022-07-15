@@ -57,6 +57,8 @@ set showcmd                  " show typed commands below status bar
 set matchpairs+=<:>          " highlight matching pairs of brackets
 set title                    " show path in console window title bar
 
+set splitright               " open splits on the right
+
 set conceallevel=0           " conceallevel can be toggled (see functions)
 
 if has("persistent_undo")
