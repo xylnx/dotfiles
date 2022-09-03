@@ -7,7 +7,7 @@ let td_file = '~/WIP/TD.md'
 " => SOURCE PLUGINS
 execute 'source ' . plugins_config
 
-=> COC SETTINGS
+" => COC SETTINGS
 " Plugins
 let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-tsserver', 'coc-prettier', 'coc-sh']
 " Run prettier on save => filetypes are defined in CocConfig

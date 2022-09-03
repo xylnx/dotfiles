@@ -1,4 +1,4 @@
-#programming MacOS
+# MacOS
 if [[ $OSTYPE == 'darwin'* ]]; then
   # silence info "macOS is using zsh"
   export BASH_SILENCE_DEPRECATION_WARNING=1
